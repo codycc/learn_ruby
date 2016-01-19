@@ -1,22 +1,3 @@
-# def translate(term)
-#   alpha = ('a'..'z').to_a
-#   vowels = ["a", "e" , "i" , "o", "u"]
-#   consonants = alpha - vowels
-#
-#   if vowels.include?(term[0])
-#     term + 'ay'
-#   elsif
-#     consonants.include?(term[0..2])
-#     return term[1..-1] + term [0] + "ay"
-#   elsif
-#     consonants.include?(term[0])
-#     return term[1..-1] + term [0] + "ay"
-#   else
-#     term
-#   end
-# end
-
-
 
 def translate str
   alpha = ('a'..'z').to_a
