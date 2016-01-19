@@ -36,26 +36,26 @@ class TestSimonSays < MiniTest::Test
   #
   # The important part is num = 2. What happens is if a num isn't given,
   # then num will fallback on 2, i.e. it has a default value of 2.
-  # def test_repeat_multiple_times
-  #   assert_equal "hello hello hello", repeat("hello", 3)
-  # end
+  def test_repeat_multiple_times
+    assert_equal "hello hello hello", repeat("hello", 3)
+  end
 
   # start_of_word
-  # def test_start_of_word_returns_first_letter
-  #   assert_equal "h", start_of_word("hello", 1)
-  # end
+  def test_start_of_word_returns_first_letter
+    assert_equal "h", start_of_word("hello", 1)
+  end
   #
-  # def test_start_of_word_returns_first_two_letters
-  #   assert_equal "Bo", start_of_word("Bob", 2)
-  # end
+  def test_start_of_word_returns_first_two_letters
+    assert_equal "Bo", start_of_word("Bob", 2)
+  end
   #
-  # def test_start_of_word_returns_first_many_letters
-  #   s = "abcdefg"
-  #
-  #   assert_equal "a", start_of_word(s, 1)
-  #   assert_equal "ab", start_of_word(s, 2)
-  #   assert_equal "abc", start_of_word(s, 3)
-  # end
+  def test_start_of_word_returns_first_many_letters
+    s = "abcdefg"
+
+    assert_equal "a", start_of_word(s, 1)
+    assert_equal "ab", start_of_word(s, 2)
+    assert_equal "abc", start_of_word(s, 3)
+  end
 
   # first_word
   def test_first_word

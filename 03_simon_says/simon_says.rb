@@ -6,28 +6,34 @@ def shout(word)
   word.upcase
 end
 
-def repeat(word)
-  "#{word} #{word}"
-end
+def repeat(string, times = 2)
+   string = "#{string} " * times
+  string.strip
+ end
 
-def start_of_word(word,max)
-  cutword = ""
-  (0..max).each{ |i|
-  cutword << word[i]
-  }
+ def start_of_word(string, letters)
+   array = string.split("")
+   array[0..letters-1].join("")
+ end
 
-end
 
 def first_word(word)
   word.split.first
 end
 
-def titleize(words)
-   word = words.split(" ")
-   if word.length >3
-     word.capitalize
-   else
-  
+def titleize(sentence)
+  words = sentence.split(" ")
+   words = words.map do |word|
+     if word != "over"
+       if word.length >= 4
+         word.capitalize
+       else
+         word
+       end
+     else
+       word
+    end
   end
-
+  words[0].capitalize!
+  words = words.join(" ")
 end
